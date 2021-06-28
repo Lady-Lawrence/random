@@ -8,7 +8,11 @@ const btnGenTwo = document.querySelector('#btn-generate-two');
 // 2. be able to click the button
 // 3. After button click, generate div
 btnGen.addEventListener('click', function () {
-    createNewDiv('bg-blue-400', 'My Big, Big H3');
+
+    const userTailwindColor = window.prompt('What TW Color?'); //string
+    const userContent = window.prompt('What Text?'); // string
+
+    createNewDiv(userTailwindColor, userContent);
 });
 
 btnGenTwo.addEventListener('click', () => {
@@ -22,9 +26,17 @@ function createNewDiv(tailwindBgColor, content) {
 
     document.body.appendChild(div);
 
+    window.alert('Your div was created');
 }
 
-// console.log(btnGen); // my string
+
+// checks if you enter a name
+function hasName() {
+    return true;
+}
+
+
+
 
 
 
